@@ -18,9 +18,18 @@ const search = document.querySelector('.search');
             document.querySelector('.select').classList.toggle('btn')
         })
         
-        // document.querySelector('.line-mob').addEventListener('load',()=>{
-        //     document.querySelector('.second').classList.remove('mob-opt')
-        // })
-        // document.querySelector('.line-mob').addEventListener('click',()=>{
-        //     document.querySelector('.second').classList.toggle('mob-opt')
-        // })
+        window.addEventListener('load',()=>{
+            document.querySelector('.list').classList.remove('ttn')
+        })
+       
+        document.querySelector(".menu").addEventListener('click', ()=>{
+            document.querySelector('.list').classList.toggle('ttn')
+        })
+
+        window.addEventListener('load',()=>{
+            document.querySelector('.menu').classList.remove('mm')
+        })
+
+        document.querySelector('.menu').addEventListener('click', ()=>{
+            document.querySelector('.menu').classList.toggle('mm')
+        })

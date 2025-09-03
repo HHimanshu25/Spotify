@@ -398,6 +398,10 @@
         }
     }
 
+    .option3 {
+        display: none;
+    }
+
     .contain {
         background-color: #121212;
         border-radius: 10px;
@@ -434,7 +438,7 @@
 
             .img {
                 background-color: #1f1f1f;
-                min-width: 171px;
+                width: 171px;
                 height: 171px;
                 border-radius: 25px;
             }
@@ -477,7 +481,7 @@
 
             .photo {
                 background-color: #1f1f1f;
-                min-width: 171px;
+                width: 171px;
                 height: 171px;
                 border-radius: 50%;
                 box-shadow: 0px 0px 5px #000;
@@ -496,6 +500,65 @@
         }
     }
 
+    .mob-opt {
+        position: relative;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-right: 20px;
+
+        span {
+            display: block;
+            background-color: white;
+            /* padding: 1.5px 12px; */
+            height: 1.5px;
+            width: 15px;
+
+        }
+
+        display: none;
+    }
+
+    .list {
+        display: none;
+        background-color: black;
+        color: white;
+        position: absolute;
+        top: 70px;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        padding-left: 50px;
+
+        ul {
+            list-style-type: none;
+        }
+    }
+
+    .up {
+        font-size: 20px;
+        margin-top: 20px;
+        line-height: 2.5;
+    }
+
+    .midlie {
+        display: inline-block;
+        padding: 1px 10px;
+        background-color: white;
+        margin: 30px 0px;
+    }
+
+    .bottom {
+        line-height: 2;
+
+    }
+
+    .ttn {
+        display: block;
+    }
 
 
     @media (max-width:1700px) {
@@ -589,4 +652,50 @@
             width: 100%;
             margin-bottom: 0px;
         }
+
+        .option2 {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .mm {
+            gap: 8.8px;
+
+            .cros1 {
+                transform-origin: 0;
+                transform: rotate(45deg);
+                transition: all 0.1s linear;
+
+            }
+
+            .cros2 {
+                display: none;
+            }
+
+            .cros3 {
+                transform-origin: 0;
+                transform: rotate(-45deg);
+                transition: all 0.1s linear;
+            }
+        }
+
+
+
+   
+    .song .img {
+        height: 121px !important;
+        width: 121px !important;
+    }
+
+    .artist .photo {
+        height: 121px !important;
+        width: 121px !important;
+        border-radius: none !important;
+    }
+
+
+
     }

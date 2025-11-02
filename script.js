@@ -10,10 +10,26 @@ const search = document.querySelector('.search');
             search.classList.toggle('active');
         });
 
-        document.querySelector(".option2").addEventListener('load', () => {
+        window.addEventListener('load', () => {
             document.querySelector('.select').classList.remove('btn')
         })
 
         document.querySelector(".option2").addEventListener('click', () => {
             document.querySelector('.select').classList.toggle('btn')
+        })
+        
+        window.addEventListener('load',()=>{
+            document.querySelector('.list').classList.remove('ttn')
+        })
+       
+        document.querySelector(".menu").addEventListener('click', ()=>{
+            document.querySelector('.list').classList.toggle('ttn')
+        })
+
+        window.addEventListener('load',()=>{
+            document.querySelector('.menu').classList.remove('mm')
+        })
+
+        document.querySelector('.menu').addEventListener('click', ()=>{
+            document.querySelector('.menu').classList.toggle('mm')
         })

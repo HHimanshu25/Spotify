@@ -435,9 +435,15 @@
                 color: white;
                 line-height: 1.6;
             }
+            span{
+                text-transform: capitalize;
+                text-align: center;
+            }
 
             .img {
                 background-color: #1f1f1f;
+                background-size: cover;
+                filter: brightness(0.7);
                 width: 171px;
                 height: 171px;
                 border-radius: 25px;
@@ -454,6 +460,26 @@
             }
         }
     }
+    /* .img1{
+        background-image: url(assent/forget.webp);
+    }
+    .img2{
+        background-image: url(assent/gaadi\ .jpeg);
+    }
+    .img3{
+        background-image: url(assent/name.jpg);
+    }
+    .img4
+    {
+        background-image: url(assent/ranu.jpeg);
+    }
+    .img5{
+        background-image: url(assent/case.jpeg);
+    }
+    .img6{
+        background-image: url(assent/mi-amor.webp);
+    } */
+    
 
     .popular {
         margin: 20px;

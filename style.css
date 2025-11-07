@@ -430,30 +430,56 @@
         .song {
             margin: 10px;
 
-        span {
-            display: block;
-            color: white;
-            line-height: 1.6;
-        }
+            span {
+                display: block;
+                color: white;
+                line-height: 1.6;
+            }
+            span{
+                text-transform: capitalize;
+                text-align: center;
+            }
 
-        .img {
-            background-color: #1f1f1f;
-            min-width: 171px;
-            height: 171px;
-            border-radius: 25px;
-        }
+            .img {
+                background-color: #1f1f1f;
+                background-size: cover;
+                filter: brightness(0.7);
+                width: 171px;
+                height: 171px;
+                border-radius: 25px;
+            }
 
             .so {
                 font-size: 18px;
                 margin-top: 5px;
             }
 
-        .sign {
-            font-size: 14px;
-            color: #a6a6a6;
+            .sign {
+                font-size: 14px;
+                color: #a6a6a6;
+            }
         }
     }
-}
+    /* .img1{
+        background-image: url(assent/forget.webp);
+    }
+    .img2{
+        background-image: url(assent/gaadi\ .jpeg);
+    }
+    .img3{
+        background-image: url(assent/name.jpg);
+    }
+    .img4
+    {
+        background-image: url(assent/ranu.jpeg);
+    }
+    .img5{
+        background-image: url(assent/case.jpeg);
+    }
+    .img6{
+        background-image: url(assent/mi-amor.webp);
+    } */
+    
 
     .popular {
         margin: 20px;
@@ -497,8 +523,95 @@
                 color: #a6a6a6;
             }
 
+        }
     }
-}
+
+    .mob-opt {
+        position: relative;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-right: 20px;
+
+        span {
+            display: block;
+            background-color: white;
+            /* padding: 1.5px 12px; */
+            height: 1.5px;
+            width: 15px;
+
+        }
+
+        display: none;
+    }
+
+    .list {
+        display: none;
+        background-color: black;
+        color: white;
+        position: absolute;
+        top: 70px;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        padding-left: 50px;
+
+        ul {
+            list-style-type: none;
+        }
+    }
+
+    .up {
+        font-size: 20px;
+        margin-top: 20px;
+        line-height: 2.5;
+    }
+
+    .midlie {
+        display: inline-block;
+        padding: 1px 10px;
+        background-color: white;
+        margin: 30px 0px;
+    }
+
+    .bottom {
+        line-height: 2;
+
+    }
+
+    .ttn {
+        display: block;
+    }
+
+    .add {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        padding: 40px 80px;
+        background-color: #000;
+    }
+
+    .add h4 {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #fff;
+    }
+
+    .add ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .add ul li {
+        margin-bottom: 10px;
+        color: #6f6f6f;
+    }
+
 
     @media (max-width:1700px) {
         .aside {
@@ -530,17 +643,123 @@
         }
     }
 
-@media (max-width:800px) {
-    main{
-        width: 800px;
+    @media (max-width:800px) {
+        main {
+            width: 800px;
+        }
+
+
+        nav {
+            width: 780px;
+        }
+
+        footer {
+            width: 750px;
+        }
+
     }
-  
-    
-    nav{
-        width: 780px;
+
+    @media (max-width:600px) {
+        .logo {
+            display: none;
+        }
+
+        .logo2 {
+            display: block;
+
+            img {
+                height: 50px;
+            }
+        }
+
+        .middel {
+            display: none;
+        }
+
+        .install,
+        .mid-line {
+            display: none;
+        }
+
+
+        .aside {
+            display: none;
+        }
+
+        footer {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        main {
+            width: 100%;
+            margin: 0;
+        }
+
+        .contain,
+        .aside {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .option2 {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .mm {
+            gap: 8.8px;
+
+            .cros1 {
+                transform-origin: 0;
+                transform: rotate(45deg);
+                transition: all 0.1s linear;
+
+            }
+
+            .cros2 {
+                display: none;
+            }
+
+            .cros3 {
+                transform-origin: 0;
+                transform: rotate(-45deg);
+                transition: all 0.1s linear;
+            }
+        }
+
+
+
+
+        .song .img {
+            height: 121px !important;
+            width: 121px !important;
+        }
+
+        .artist .photo {
+            height: 121px !important;
+            width: 121px !important;
+            border-radius: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer {
+                grid-template-columns: 1fr;
+            }
+
+        }
     }
-    footer{
-        width: 750px;
-    }
-    
-}

@@ -34,33 +34,76 @@ document.querySelector('.menu').addEventListener('click', () => {
     document.querySelector('.menu').classList.toggle('mm')
 })
 
-let length = 20;
+let last = 1;
 
-for (let i=1; i<= length; i++) {   
+function addsong() {
+    last = last + 1;
+    newsong(last);
+}
+function newsong(idx) {
+    
+    let div = document.createElement("div");
+    div.setAttribute("class", "song");
 
-    document.querySelector(`.img${i}`).style.backgroundImage = `url("assent/song${i}.jpg")`
-    
-    let don = document.querySelector(`.song${i}`).children[1];
-    if(don.innerHTML.includes("Song")){
-        // don.nnerHTML = prompt("enter your song name")
-    }    
-    console.log(i)
-    let doon = document.querySelector(`.song${i}`).children[2];
-    if(doon.innerHTML.includes("singer name")){
-        // doon.innerHTML = prompt("enter your singer name")
-    }    
-    
+    for (let j = 0; j < 3; j++) {
+        let span = document.createElement("span");
+        if (j == 0) {
+            span.setAttribute("class", `img img${idx}`);
+            span.style.backgroundImage = `url('./assent/song${idx}.jpg')`;
+        }
+        else if (j == 1) {
+            setTimeout(() => {
+                span.setAttribute("class", "so");
+                span.innerHTML = prompt("enter yoru song name");
+            }, 1000);
+        } else if (j == 2) {
+            setTimeout(() => {
+                span.setAttribute("class", "sign");
+                span.innerHTML = prompt("enter singer name");
+            }, 1000)
+        }
+        else {
+            break;
+        };
+        div.appendChild(span);
+    }
 
-    
-    
+    document.querySelector(".songs").append(div);
 }
 
-// for(let i=1; i<=length; i++){
-//     let value = prompt(`enter your singer name for ${i}`)
-//     document.querySelector(`.song${i}`).children[1].innerHTML=value
-// }
+let lasi = 1;
 
+function addart() {
+    ++lasi;
+    artist(lasi);
+}
+function artist(idx) {
 
+    let div = document.createElement("div");
+    div.setAttribute("class", "artist");
 
+    for (let j = 0; j < 3; j++) {
+        let span = document.createElement("span");
+        if (j == 0) {
+            span.setAttribute("class", "photo");
+           
+        }
+        else if (j == 1) {
+            setTimeout(() => {
+                span.setAttribute("class", "so");
+                span.innerHTML = 'Singer';
+            }, 1000);
+        } else if (j == 2) {
+            setTimeout(() => {
+                span.setAttribute("class", "sign");
+                span.innerHTML = 'Artist'
+            }, 1000)
+        }
+        else {
+            break;
+        };
+        div.appendChild(span);
+    }
 
-
+    document.querySelector(".artits").append(div);
+}

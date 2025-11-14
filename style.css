@@ -460,7 +460,9 @@
             }
         }
     }  
-    
+    .img1{
+        background-image: url(./assent/song1.jpg);
+    }
 
     .popular {
         margin: 20px;

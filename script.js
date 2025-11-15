@@ -40,30 +40,39 @@ function addsong() {
     last = last + 1;
     newsong(last);
 }
+
+for(let i = 2; i<=last; i++){
+    newsong(i);
+}
 function newsong(idx) {
     
     let div = document.createElement("div");
     div.setAttribute("class", "song");
 
-    for (let j = 0; j < 3; j++) {
+    for (let j = 0; j < 4; j++) {
         let span = document.createElement("span");
         if (j == 0) {
             span.setAttribute("class", `img img${idx}`);
             span.style.backgroundImage = `url('./assent/song${idx}.jpg')`;
+            
         }
         else if (j == 1) {
             setTimeout(() => {
                 span.setAttribute("class", "so");
-                span.innerHTML = prompt("enter yoru song name");
+                // span.innerHTML = prompt("enter yoru song name");
+                span.innerHTML = "song"
             }, 1000);
         } else if (j == 2) {
             setTimeout(() => {
                 span.setAttribute("class", "sign");
-                span.innerHTML = prompt("enter singer name");
+                // span.innerHTML = prompt("enter singer name");
+                span.innerHTML = "singer name";
             }, 1000)
         }
         else {
-            break;
+            span.id="plbutt"
+            span.className="material-symbols-outlined"
+            span.innerHTML="play_arrow"
         };
         div.appendChild(span);
     }

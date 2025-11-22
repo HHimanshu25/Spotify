@@ -449,7 +449,7 @@
         filter: brightness(0.7);
         width: 171px;
         height: 171px;
-        border-radius: 25px;
+        border-radius: 15px;
     }
 
     .so {
@@ -465,6 +465,21 @@
 
     .img1 {
         background-image: url(./assent/song1.jpg);
+    }
+    .img2{
+        background-image: url(./assent/song2.jpg);
+    }
+    .img3{
+        background-image: url(./assent/song3.jpg);
+    }
+    .img4{
+        background-image: url(./assent/song4.jpg);
+    }
+    .img5{
+        background-image: url(./assent/song5.jpg);
+    }
+    .img6{
+        background-image: url(./assent/song6.jpg);
     }
 
     #plbutt{
@@ -503,7 +518,7 @@
                 display: block;
                 color: white;
                 line-height: 1.6;
-                text-align: center;
+                text-transform: capitalize;
             }
 
             .photo {
@@ -512,6 +527,8 @@
                 height: 171px;
                 border-radius: 50%;
                 box-shadow: 0px 0px 5px #000;
+                background-position: center;
+                background-size: cover;
             }
 
             .so {
@@ -526,7 +543,24 @@
 
         }
     }
-
+.photo1{
+    background-image: url(./assent/Artitist/artits1.jpg);
+}
+.photo2{
+    background-image: url(./assent/Artitist/artits2.jpg);
+}
+.photo3{
+    background-image: url(./assent/Artitist/artits3.jpg);
+}
+.photo4{
+    background-image: url(./assent/Artitist/artits4.jpg);
+}
+.photo5{
+    background-image: url(./assent/Artitist/artits5.jpg);
+}
+.photo6{
+    background-image: url(./assent/Artitist/artits6.jpg);
+}
     .mob-opt {
         position: relative;
     }
@@ -585,6 +619,7 @@
 
     .ttn {
         display: block;
+        z-index: 1;
     }
 
     .add {

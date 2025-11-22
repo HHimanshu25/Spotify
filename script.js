@@ -34,16 +34,16 @@ document.querySelector('.menu').addEventListener('click', () => {
     document.querySelector('.menu').classList.toggle('mm')
 })
 
-let last = 1;
+document.querySelector('.img').addEventListener('dblclick',()=>{
+    addsong()
+})
+let last = 6;
 
 function addsong() {
     last = last + 1;
     newsong(last);
 }
 
-for(let i = 2; i<=last; i++){
-    newsong(i);
-}
 function newsong(idx) {
     
     let div = document.createElement("div");
@@ -59,14 +59,14 @@ function newsong(idx) {
         else if (j == 1) {
             setTimeout(() => {
                 span.setAttribute("class", "so");
-                // span.innerHTML = prompt("enter yoru song name");
-                span.innerHTML = "song"
+                span.innerHTML = prompt("enter yoru song name");
+                // span.innerHTML = "song"
             }, 1000);
         } else if (j == 2) {
             setTimeout(() => {
                 span.setAttribute("class", "sign");
-                // span.innerHTML = prompt("enter singer name");
-                span.innerHTML = "singer name";
+                span.innerHTML = prompt("enter singer name");
+                // span.innerHTML = "singer name";
             }, 1000)
         }
         else {
